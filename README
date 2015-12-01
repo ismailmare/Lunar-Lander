@@ -1,0 +1,55 @@
+/*
+ * NAME: Ismail Mare
+ * ID: 1388973
+ * LECTURE SECTION: B1
+ * INSTRUCTOR: SMITH JACQUELINE
+ * LAB SECTION: H02
+ * TA: NICHOLAS BARRIGA
+ *
+ * To complete the tasks set out in assingment 3 type 'make' and  
+ * run the program with './lander' and use the commands -g, -t, -f 
+ * and -i to intialize the gravity, thrust, inputfile, and the improvements
+ * made on the mickmicked sample lander. 
+ *
+ * Improvements:
+ * 	Graphical Fuel Gauge added, and if fuel runs out velocity will not
+ *      work. The space bar will become inactive.
+ *
+ * 	Preventing the ship from going above the window and smoothly wrapping 
+ *      around the right and left edges. Also if the lander goes above the
+ *      window velocity is set to 0 and it will eventually fall back down
+ *      into sight where thrust is restored.
+ *
+ *      Perfect command line checking using getopt.
+ *
+ *      Drawing a significantly better ship. The program will initially draw a
+ *      ship very similar to the sample lander executable. If the -i option is
+ *      used, a better looking ship will be drawn.
+ *
+ * The program beings in main.c which reads the command line args and makes 
+ * sure no errors occur opening the inputfile, the executable, and the debug
+ * file i use. The code for timing and curses are also in this file.
+ * 
+ * The landscape line segments are stored in dynamically allocated and freed  
+ * when the program exits.
+ *
+ *
+ * Then from main draw_landscape is called where the landscape is read from
+ * the input file and drawn. Draw_ship is then called and the ship is drawn.
+ *
+ * Timer is then called where gravity is initiated, and curses are used in the 
+ * block_signal function. 
+ *
+ * Every time the signal is blocked the program checks if the ship intersects
+ * the landscape lines. 
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * I did not collaborate with anyone.
+*/
